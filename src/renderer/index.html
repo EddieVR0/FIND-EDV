@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de archivos</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="finder" aria-label="Buscador de archivos">
+      <section class="search-panel">
+        <label class="search-bar" for="searchInput">
+          <span class="search-icon" aria-hidden="true"></span>
+          <input id="searchInput" type="search" placeholder="Buscar archivos y carpetas" autocomplete="off" autofocus />
+          <kbd>Esc</kbd>
+        </label>
+        <button id="closeButton" class="close-button" type="button" aria-label="Cerrar aplicación">Cerrar</button>
+      </section>
+      <p id="statusText" class="status-text" aria-live="polite">Busca en Escritorio, Documentos y Descargas</p>
+      <ul id="resultsList" class="results-list" aria-live="polite"></ul>
+
+      <h3 style="color: rgb(90, 95, 99);">EDDIE VR</h3>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

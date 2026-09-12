@@ -1,0 +1,33 @@
+{
+  "name": "finder-lite-windows",
+  "version": "1.0.0",
+  "description": "Aplicación de búsqueda de archivos inspirada en Finder pero pensada para Windows.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.finderlite.windows",
+    "productName": "Finder Lite",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^26.15.3"
+  }
+}
